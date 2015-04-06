@@ -40,6 +40,12 @@ public class CarTest {
 		assertThat(car1.getSpeed(), is(0));
 	}
 	// Create and pass test for no deceleration below 0.
-
+	@Test
+	public void notBelowZero() {
+		Car car1 = new Car("Red", 130);
+		car1.accelerate(130);
+		car1.decelerate(131);
+		assertThat(car1.getSpeed(), is(0));
+	}
 	
 }
