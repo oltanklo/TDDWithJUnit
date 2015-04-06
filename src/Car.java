@@ -42,8 +42,7 @@ public class Car {
 	 * "Color: red, Speed: 100"
 	 */
 	public String toString(){
-		// not implemented!
-		return("");
+		return("Color: " + this.color + ", Speed: " + this.speed);
 	}
 
 }
