@@ -36,7 +36,11 @@ public class Car {
 		  this.speed+= amount;
 		}
 	}
-	
+	public void decelerate(int amount) {
+		if (amount <= this.speed) {
+			this.speed -= amount;
+		}
+	}
 	/**
 	 * Displays the object as a string in the format
 	 * "Color: red, Speed: 100"
