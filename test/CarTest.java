@@ -31,21 +31,19 @@ public class CarTest {
 		assertThat(car1.toString(), is("Color: Red, Speed: 0"));
 	}
 
-	// Create and pass test for deceleration.
 	@Test
 	public void decelerationTest() {
 		Car car1 = new Car("Red", 100);
 		car1.accelerate(100);
-		car1.decelerate(100);
-		assertThat(car1.getSpeed(), is(0));
+		car1.decelerate(40);
+		assertThat(car1.getSpeed(), is(60));
 	}
-	// Create and pass test for no deceleration below 0.
+
 	@Test
 	public void notBelowZero() {
 		Car car1 = new Car("Red", 130);
 		car1.accelerate(130);
 		car1.decelerate(131);
 		assertThat(car1.getSpeed(), is(0));
-	}
-	
+	}	
 }
